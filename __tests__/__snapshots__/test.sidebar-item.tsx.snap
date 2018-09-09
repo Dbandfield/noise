@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Click shows slider element 1`] = `
+<div
+  className="sidebar-item"
+  onClick={[Function]}
+>
+  <img
+    height="16px"
+    src="test-file-stub"
+    width="16px"
+  />
+  <p
+    className="sidebar-item-title"
+  >
+     
+    test
+     
+  </p>
+</div>
+`;
+
+exports[`Click shows slider element 2`] = `
+<div
+  className="sidebar-item"
+  onClick={[Function]}
+>
+  <img
+    height="16px"
+    src="test-file-stub"
+    width="16px"
+  />
+  <p
+    className="sidebar-item-title"
+  >
+     
+    test
+     
+  </p>
+  <input
+    className="slider"
+    defaultValue="1"
+    max="10"
+    min="1"
+    onInput={[Function]}
+    type="range"
+  />
+</div>
+`;
+
+exports[`Clicking again hides slider element 1`] = `
+<div
+  className="sidebar-item"
+  onClick={[Function]}
+>
+  <img
+    height="16px"
+    src="test-file-stub"
+    width="16px"
+  />
+  <p
+    className="sidebar-item-title"
+  >
+     
+    test
+     
+  </p>
+  <input
+    className="slider"
+    defaultValue="1"
+    max="10"
+    min="1"
+    onInput={[Function]}
+    type="range"
+  />
+</div>
+`;
+
+exports[`Clicking again hides slider element 2`] = `
+<div
+  className="sidebar-item"
+  onClick={[Function]}
+>
+  <img
+    height="16px"
+    src="test-file-stub"
+    width="16px"
+  />
+  <p
+    className="sidebar-item-title"
+  >
+     
+    test
+     
+  </p>
+</div>
+`;

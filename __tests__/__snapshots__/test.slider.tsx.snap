@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Supplied function called on input 1`] = `
+<input
+  className="slider"
+  defaultValue="1"
+  max="10"
+  min="1"
+  onInput={[Function]}
+  type="range"
+/>
+`;
+
+exports[`Supplied function called on input 2`] = `
+<input
+  className="slider"
+  defaultValue="1"
+  max="10"
+  min="1"
+  onInput={[Function]}
+  type="range"
+/>
+`;

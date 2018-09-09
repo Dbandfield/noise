@@ -1,0 +1,47 @@
+{
+  "name": "web-test",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A vagues description about a package which tests various things",
+  "main": "dist/index",
+  "scripts": {
+    "test": "jest",
+    "build": "webpack",
+    "start": "webpack-dev-server --open"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "perlin-noise": "0.0.1",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.1",
+    "@types/react": "^16.4.7",
+    "@types/react-dom": "^16.0.6",
+    "@types/react-test-renderer": "^16.0.2",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.4.2",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "bable-loader": "0.0.1-security",
+    "css-loader": "^1.0.0",
+    "file-loader": "^1.1.11",
+    "jest": "^23.5.0",
+    "node-sass": "^4.9.2",
+    "react-test-renderer": "^16.4.2",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.21.0",
+    "ts-jest": "^23.1.4",
+    "ts-loader": "^4.4.2",
+    "tslint": "^5.11.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.0.1",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.16.4",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
+  }
+}

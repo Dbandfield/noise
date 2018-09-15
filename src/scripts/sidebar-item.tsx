@@ -4,6 +4,8 @@ import { SliderElement } from "./slider";
 
 import ArrowDown from "../img/arrow-down.svg";
 import ArrowRight from "../img/arrow-right.svg";
+
+import "../style/SideBarItem.scss";
 export interface ISideBarItemProps {
   name: string;
   func: (x: number) => void;

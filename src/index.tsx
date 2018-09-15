@@ -1,11 +1,7 @@
-import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
 
-import {Page} from './scripts/page';
+import { Page } from "./scripts/page";
 
-import './style/main.scss';
-
-ReactDOM.render(
-    <Page />,
-    document.getElementById('main'),
-);
+ReactDOM.render(<Page />, document.getElementById("main"));

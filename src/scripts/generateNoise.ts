@@ -1,8 +1,31 @@
-import perlin from "perlin-noise";
-import { ReactInstance } from "react";
+import Simplex from "simplex-noise";
 
-export const getNoise = (width: number, height: number) => {
-  return perlin.generatePerlinNoise(width, height);
+export const mapValue = (
+  value: number,
+  inMin: number,
+  inMax: number,
+  outMin: number,
+  outMax: number
+) => {
+  return ((value - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
+};
+
+export const getNoise = (
+  generator: Simplex,
+  width: number,
+  height: number,
+  time: number
+) => {
+  const noiseArr = new Array(width * height);
+  for (let i = 0; i < noiseArr.length; i++) {
+    const x = i % width;
+    const y = Math.floor(i / width);
+    noiseArr[i] = generator.noise3D(x / 100, y / 100, time);
+  }
+
+  const constrained = noiseArr.map((el: number) => mapValue(el, -1, 1, 0, 1));
+
+  return constrained;
 };
 
 export const getContext = (id: string): CanvasRenderingContext2D => {
@@ -24,14 +47,16 @@ export const getImageData = (
 export const renderNoise = (
   canvas: HTMLCanvasElement,
   width: number,
-  height: number
+  height: number,
+  time: number,
+  generator: Simplex
 ) => {
   const context = canvas.getContext("2d");
 
   if (context) {
     const imageData = getImageData(context, width, height);
     const dat = imageData.data;
-    const noiseData = getNoise(width, height);
+    const noiseData = getNoise(generator, width, height, time / 1000);
 
     for (let i = 0, j = 0; i < noiseData.length; i++, j += 4) {
       dat[j + 0] = noiseData[i] * 255;
@@ -40,6 +65,5 @@ export const renderNoise = (
       dat[j + 3] = 255;
     }
     context.putImageData(imageData, 0, 0);
-    console.log(dat);
   }
 };

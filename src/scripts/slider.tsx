@@ -1,5 +1,7 @@
 import React from "react";
 
+import "../style/Slider.scss";
+
 export interface ISliderProps {
   onInput: (sliderValue: number) => void;
 }

@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 import { SideBarItem } from "./sidebar-item";
 
+import "../style/SideBar.scss";
+
 export interface ISideBarItem {
   id: number;
   func: (n: number) => void;
@@ -25,7 +27,7 @@ export class SideBar extends Component<ISideBarProps, any> {
 
   public render() {
     return (
-      <div className="sidebar">
+      <div className="side-bar">
         <ul>{this.state.items.map(this.generateSideBarItemJSX)}</ul>
       </div>
     );

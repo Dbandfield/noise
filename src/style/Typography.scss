@@ -1,0 +1,12 @@
+@import "g-fonts.scss";
+@import "./Colours.scss";
+
+%text {
+  color: $fontColour1;
+  font-family: montserrat;
+}
+
+%small-text {
+  @extend %text;
+  font-size: 0.8rem;
+}
